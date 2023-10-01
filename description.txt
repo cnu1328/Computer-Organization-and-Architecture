@@ -1,0 +1,74 @@
+mov al,cx
+mov bl,3 
+
+div bl
+
+mov cl,ah
+
+mov ah,0
+
+call print_num
+
+mul bl; 
+
+printn
+call print_num
+
+
+
+
+:fact:
+    mul ax
+    
+:loop fact
+
+
+
+
+
+mov ax,a
+    
+
+lcm:
+
+    div max
+    
+    cmp dx,0
+    
+    je lccm 
+    mov cx,max
+                 
+                 
+    add max,cx
+    
+    jmp lcm
+    
+    
+   
+    
+    
+
+
+
+lccm:
+
+    mov ax,b
+    
+    div max
+    
+    cmp dx,0
+    
+    je lastStage
+    mov cx,max
+    add max,cx
+    
+    jmp lcm
+    
+    
+    
+    
+lastStage:
+
+    mov ax,max
+    
+    call print_num
